@@ -13,6 +13,10 @@ html {
 }
 body{
     background: beige;
+    scroll-behavior: smooth;
+}
+body.lock{
+    overflow: hidden;
 }
 html, body {
     max-width: 100%;
@@ -60,19 +64,7 @@ section {
 h1, h2, h3 span {
     color: #e3bc59f3;
 }
-header {
-    background-color: #eceef0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1.5px solid #cdc5c5;
-    padding: 2px 7%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    list-style-type: none;
-}
+
 .heading {
     text-align: center;
     padding-bottom: 54px;
@@ -94,32 +86,56 @@ header {
 .p{
     font-size: 16px;
 }
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #eceef0;
+    border-bottom: 1.5px solid #cdc5c5;
+}
+.header_container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0px 25px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
 .logo a img{
     width: 60px;
 }
 div.logo h1 {
     margin: 7px;
 }
-.navbar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.center_row > li{
+    position: relative;
+    margin: 0px 0px 0px 20px;
 }
-.center_row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-}
-.nav_container ol li {
-    margin: 0 14px;
-}
-ol {
+ol, ul {
     list-style: none;
+}
+.menu_sub-list{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 15px;
+    min-width: 150px;
+}
+.menu_sub-list li {
+    margin: 0px 0px 10px 0px;
+}
+.menu_sub-list li:last-child{
+    margin: 0;
 }
 a.menu__item{
     margin:0 1rem;
+}
+a.menu__item,
+.menu_sub-list li a{
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
     font-style: normal;
@@ -131,6 +147,11 @@ a.menu__item:hover {
     border-bottom: 2px solid #e3bc59f3;
     padding-bottom: 8px;
 }
+.menu_sub-list li a:hover{
+    color: #e3bc59f3;
+    border-bottom: 2px solid #e3bc59f3;
+    padding-bottom: 4px;
+}
 div.logo{
     display: flex;
     flex-direction: row;
@@ -138,6 +159,7 @@ div.logo{
 div.icons {
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
 }
 div.icons div {
     cursor: pointer;
@@ -147,7 +169,7 @@ div.icons div {
 div.icons div img {
     height: 28px;
 }
-#menu-btn{
+.menu_icon{
     display: none;
 }
 section{
@@ -289,6 +311,113 @@ div.buy-coffee:hover {
     background:#eeedbe;
     color:#b6dada;
   }
+.menu_arrow{
+    display: none;
+}
+body._pc .center_row > li:hover .menu_sub-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    pointer-events: all;
+}
+body._mobile .center_row > li {
+    display: flex;
+    align-items: center;
+}
+body._mobile .menu_arrow{
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; 
+    border-right: 5px solid transparent; 
+    border-top: 10px solid #cbcfcf;
+}
+body._mobile .center_row > li.active .menu_sub-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    pointer-events: all;
+    display: block;
+}
+
+@media (min-width: 767px){
+    .center_row{
+        display: flex;
+        align-items: center;
+    }
+    .center_row > li {
+        padding: 10px 0;
+    }
+    nav.navbar.nav_container{
+        display: flex;
+    }
+    .menu_sub-list{
+        transform: translate(0px, 10%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease 0s;
+    }
+}
+@media (max-width: 767px) {
+    .menu_icon{
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .nav_container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(174, 201, 201, 0.95);
+        color: rgb(230, 240, 238);
+        padding: 100px 30px;
+        transition: right 0.3s ease 0s;
+    }
+    .nav_container.active{
+        right: 0;
+        
+    }
+    .nav_container::before{
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        max-height: 102px;
+        background-color: #eceef0;
+        border-bottom: 1.5px solid #cdc5c5;
+        z-index: 2;
+    }
+    .center_row > li {
+        flex-wrap: wrap;
+        margin: 15px 0px 25px 0px;
+    }
+    .nav_container > li.active .menu_sub-list{
+        display: block;
+    }
+    .center_row li a{
+        font-size: 22px;
+    }
+    .menu_sub-list{
+        position: relative;
+        flex: 1 1 100%;
+        display: none;
+    }
+    .menu_sub-link{
+        font-size: 18px;
+    }
+}
+div.logo{
+    z-index: 3;
+}
+
+
 
 
 
@@ -318,33 +447,6 @@ div.buy-coffee:hover {
     }
     section{
         padding:2rem;
-    }
-}
-@media (max-width: 786px){
-    #menu-btn{
-        display:inline-block;
-    } 
-    ol.center_row  {
-        position: absolute;
-        top: 101.5px;
-        right: -100%;
-        background: #fff;
-        width: 280px;
-        height: calc(100vh - 9.5rem);
-    }
-     ol.center_row.active{
-        right: 0;
-    }
-     ol.center_row  {
-        display: block;
-        padding: 8px;
-        font-size: 34px;
-        
-    }
-    .container.cafebg{
-        background-position: left;
-        justify-content: center;
-        text-align: center;
     }
 }
 @media (max-width: 440px){

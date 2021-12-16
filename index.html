@@ -11,28 +11,33 @@
     </style>
 </head>
 <body>
-    <script>
-    window.onload = function(){ 
-    let navbar = document.querySelector('.center_row');
-
-    document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-    };
-}
-        </script>
-<header>
-    <div class="logo"><a href="#"><img src="./img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
-    <nav class="navbar nav_container">
-        <ol class="center_row">
-            <li><a href="./pages/about.html" class="menu__item" target="_blank">About</a></li>
-            <li><a href="./pages/сaffeine.html" class="menu__item" target="_blank">Про кофеїн</a></li>
-            <li><a href="./pages/table.html" class="menu__item" target="_blank">Афіша</a></li>
-        </ol>
-    </nav>
-    <div class="icons">
-        <div class="search" id="search-btn"><img src="./img/search.png" alt="search"></div>
-        <div class="shopping" id="card-btn"><img src="./img/shopping-cart.png" alt="yourcart"></div>
-        <div class="bars" id="menu-btn"><img src="./img/menu.png" alt="menu"</div>
+<header class="header">
+    <div class="header_container">
+        <div class="logo"><a href="#"><img src="./img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
+        <div class="header_menu menu">
+            <div class="menu_icon">
+                <img src="img/menu.png"></im>
+            </div>
+            <nav class="navbar nav_container">
+                <ol class="center_row">
+                    <li>
+                        <a href="#" class="menu__item">About</a>
+                        <span class="menu_arrow"></span>
+                        <ul class="menu_sub-list">
+                            <li><a href="#" class="menu_sub-link" target="_blank">Філософія</a></li>
+                            <li><a href="#" class="menu_sub-link" target="_blank">Партнери</a></li>
+                            <li><a href="#" class="menu_sub-link" target="_blank">Контакти</a></li>
+                        </ul>
+                    </li>
+                <li><a href="./pages/сaffeine.html" class="menu__item" target="_blank">Про кофеїн</a></li>
+                <li><a href="./pages/table.html" class="menu__item" target="_blank">Афіша</a></li>
+                </ol>
+                <div class="icons">
+                    <div class="search" id="search-btn"><img src="./img/search.png" alt="search"></div>
+                    <div class="shopping" id="card-btn"><img src="./img/shopping-cart.png" alt="yourcart"></div>
+                </div>
+            </nav>
+    </div>
     </div>
 </header>
 <section class="container cafebg">
@@ -90,4 +95,6 @@
         
 </section>
 </body>
+<script src="script.js"></script>
+<div class="ping" style="background-image: url(&quot;https://nervin.net/img/ping.gif&quot;); width: 23px; height: 44px; position: fixed; bottom: 0px; transform: scaleX(-1); left: 1354.83px;"></div>
 </html>
