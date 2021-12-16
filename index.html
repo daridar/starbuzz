@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Starbuzz | Головна сторінка</title>
+    <link rel = "stylesheet" href="mainfile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+    window.onload = function(){ 
+    let navbar = document.querySelector('.center_row');
+
+    document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+    };
+}
+        </script>
+<header>
+    <div class="logo"><a href="#"><img src="./img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
+    <nav class="navbar nav_container">
+        <ol class="center_row">
+            <li><a href="./pages/about.html" class="menu__item" target="_blank">About</a></li>
+            <li><a href="./pages/сaffeine.html" class="menu__item" target="_blank">Про кофеїн</a></li>
+            <li><a href="./pages/table.html" class="menu__item" target="_blank">Афіша</a></li>
+        </ol>
+    </nav>
+    <div class="icons">
+        <div class="search" id="search-btn"><img src="./img/search.png" alt="search"></div>
+        <div class="shopping" id="card-btn"><img src="./img/shopping-cart.png" alt="yourcart"></div>
+        <div class="bars" id="menu-btn"><img src="./img/menu.png" alt="menu"</div>
+    </div>
+</header>
+<section class="container cafebg">
+    <div class="content">
+        <h1>Starbuzz</h1>
+        <p><i>"Наша кава  - вишуканість,  яку слід спробувати кожному"</i></p>
+        <p class="menu_item"><a href="./pages/about.html" target="_blank" class="name">Більше про нас</a></p>
+    </div>
+</section>
+<section class="buy-pr container">
+    <h2 class="heading">Premium coffee blends for everyone</h2>
+        <h3 class="heading2">Бронюйте та купуйте якісну та смачну каву саме у нас!</h3>
+        <div class="grid">
+            <div class="buy-coffee">
+            <img class="starpic" src="./img/BlondeEspresso.png" alt="">
+                <h4 class="heading3">Starbucks Blonde Espresso Roast</h4>
+                <div class="roast">
+            <img class="typeroast" src="./img/orange-point.svg" alt="">
+                <h4 class="heading3">Світле обсмажування</h4>
+                </div>
+            <p class="p">Отримуйте задоволення від нашого еспресо найсвітлішого ступеня обсмажування.</p>
+            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+        </div>
+        <div class="buy-coffee">
+            <img class="starpic" src="./img/LongShadow.png" alt="">
+                <h4 class="heading3">Starbucks Holiday Blend</h4>
+                    <div class="roast">
+                    <img class="typeroast" src="./img/brown-point.svg" alt="">
+                <h4 class="heading3">Середнє обсмажування</h4>
+                    </div>
+            <p class="p">Насолодіться особливим блендом солодких смаків з трав’яними та кленовими нотками.</p>
+            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+        </div>
+    <div class="buy-coffee">
+        <img class="starpic" src="./img/Shadow_HouseBlend.png" alt="">
+            <h4 class="heading3">Starbucks House Blend</h4>
+            <div class="roast">
+                <img class="typeroast" src="./img/brown-point.svg" alt="">
+            <h4 class="heading3">Середнє обсмажування</h4>
+            </div>
+            <p class="p">Збалансований смак горіхів і какао, який розкривається завдяки обсмажуванню.</p>
+            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+    </div>
+    <div class="buy-coffee special">
+        <img class="starpic" src="./img/Shadow_EspressoRoast.png" alt="">
+            <h4 class="heading3">Dark Espresso Roast</h4>
+            <div class="roast">
+                <img class="typeroast" src="./img/purple-point.svg" alt="">
+            <h4 class="heading3">Темне обсмажування</h4>
+            </div>
+            <p class="p">Для цього вишуканого еспресо характерний розкішний карамельний присмак.</p>
+            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+    </div>
+        </div>
+        
+</section>
+</body>
+</html>
