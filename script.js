@@ -49,3 +49,10 @@ document.querySelector('.menu_icon').onclick = () =>{
     menuBody.classList.toggle('active');
     iconMenu.classList.toggle('active');
 }
+ //rating stars
+ const ratingItemsList = document.querySelectorAll('.rating_item');
+ const ratingItemsArray = Array.prototype.slice.call(ratingItemsList);
+    ratingItemsArray.forEach(item =>
+        item.addEventListener('click', ()=>
+        item.parentNode.dataset.totalValue = item.dataset.itemValue)
+        );
