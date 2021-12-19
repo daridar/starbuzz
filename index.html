@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Starbuzz | Головна сторінка</title>
-    <link rel = "stylesheet" href="mainfile.css">
+    <link rel = "stylesheet"  href="mainfile.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
     <style>
     </style>
@@ -46,6 +46,14 @@
         <p><i>"Наша кава  - вишуканість,  яку слід спробувати кожному"</i></p>
         <p class="menu_item"><a href="./pages/about.html" target="_blank" class="name">Більше про нас</a></p>
     </div>
+</section>
+<section class="intro">
+    <div class="intro-coffee active-block">
+        <h1 class="heading">Starbuzz</h1>
+        <p class="title_p">Ми зібрали найкращі смаки кави з усього світу!</p>
+        <p><i class="down"></i></p>
+    </div>
+</div>
 </section>
 <section class="buy-pr container">
     <h2 class="heading">Premium coffee blends for everyone</h2>
@@ -181,8 +189,44 @@
         </div>
     </div>
 </section>
-<section>
-
+<section class="news">
+    <div class="columns1">
+        <div class="part1">
+            <img src="./img/новорічна кава.jpg" alt="coffee">
+        </div>
+        <div class="part1">
+            <div class="container-form">
+                <form class="main_form" action="#">
+                    <fieldset class="forms">
+                        <legend>Підписка на новини</legend>
+                            <p class="p">Хочете бути в курсі подій? Підпишіться на кавові новини!</p>
+                        <div class="columns1">
+                            <div class="part1">
+                                <label for="email">Email</label>
+                                <input class="input_det" type="email" id="email" title="Вкажіть свій email" placeholder="Введіть Ваш email">
+                            </div>
+                            <div class="part1 subsc">
+                            <div class="buttons">
+                                <button type="submit" class="floated button">Підписатися</button>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="columns1">
+                            <div class="inputfield part1">
+                                <label for="pack" class="check">
+                                <input type="checkbox" id="pack" class="custom-checkbox" name="number" value="one">
+                                <span class="checkmark"></span>
+                                </label> 
+                            <div class="part1">
+                                <p class="p">Заповнюючи цю форму, Ви погоджуєтеся з нашою <a href="#" class="p">політикою конфіденціальності</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 </body>
 <script src="script.js"></script>
