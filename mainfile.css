@@ -14,6 +14,7 @@ html {
 body{
     background: beige;
     scroll-behavior: smooth;
+    overflow: auto;
 }
 body.lock{
     overflow: hidden;
@@ -63,10 +64,10 @@ section {
     padding: 40px 7%;
     z-index: 1000;
 }
- h3 span {
+h3 span {
     color: #e3bc59f3;
 }
-h1, h2{
+h1, h2, h3{
     color: #a9855b;
 }
 
@@ -93,7 +94,6 @@ h1, h2{
     font-size: 16px;
 }
 .header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -537,8 +537,7 @@ i.down:hover{
 .container-form legend{
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
-    color: #dfbf6ff3;
+    color: #a9855b;
     text-transform: uppercase;
     text-align: center;
 }
@@ -626,6 +625,163 @@ label p a:hover{
     width: 100%;
     height: auto;
 }
+/*section footer*/
+.footer{
+    background-color: #e9e7e5;
+}
+/*popup*/
+.popup{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.712);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+.popup_body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    font-size: 14px;
+}
+.popup_content{
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 30px;
+}
+.popup_header .popup_close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 50px;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+form.main_form_1 fieldset{
+    border-color: #fde3a0b4;
+    border-style: solid;
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+    padding: 20px 15px;
+    margin: 20px;
+}
+.part{
+    margin: 15px;
+    font-size: 16px;
+    flex: 50%;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding: 20px;
+    vertical-align: middle;
+}
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+.part input{
+    width: 160px;
+    outline: none;
+    border: 0.5px solid #bdbcbaf3;
+    font-size: 15px;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+}
+
+/*footer*/
+footer{
+    background-color: #eceef0;
+}
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-footer ul{
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-footer ul li a{
+    padding: 0 12px;
+    margin-bottom: 16px;
+    color: #726767;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.flex-row{
+    display: flex;
+}
+.flex-row.flex-links li a:hover{
+    color: #e3bc59f3;
+    border-bottom: 2px solid #e3bc59f3;
+    padding-bottom: 4px;
+}
+ @media (min-width: 900px){
+        footer{
+        padding: 40px 20px;
+        }
+}
+
+/*page about caffeine*/
+.bg-color img{
+    margin: auto;
+    display: flex;
+}
+.left-coffee {
+    float: left;
+    margin: 4px ;
+    width: 280px;
+    height: 262px;
+}
+.left-tea{
+    float: left;
+    margin: 4px 5px 4px 5px ;
+    width: 230px;
+    height: 210px;
+    margin-top: 30px;
+}
+.circle {
+    float: left;
+    shape-outside: circle(45%);
+    height: 500px;
+    width: 500px;
+}
+.make-drink{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    text-transform: initial;
+    margin: 10px 5px;
+    color: #333333;
+}
+.bg-color,
+.bg-muted,
+.beans-bg,
+.coffee-bg,
+.make-coffee,
+.tea-bg,
+.make-tea{
+background-color: #dadfdf;
+}
+
+
+
+
+
 
 
 
@@ -709,7 +865,7 @@ div.title_coffee span {
     margin-left: 10px;
 }
 div.logo{
-    z-index: 3;
+    z-index: 2;
 }
 @media (max-width: 1280px){
     .row1{
