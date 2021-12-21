@@ -34,7 +34,7 @@
                 </ol>
                 <div class="icons">
                     <div class="search" id="search-btn"><img src="./img/search.png" alt="search"></div>
-                    <div class="shopping" id="card-btn"><img src="./img/shopping-cart.png" alt="yourcart"></div>
+                    <div class="shopping" id="card-btn"><a href="#popup"><img src="./img/shopping-cart.png" alt="yourcart"></a><span>0</span></div>
                 </div>
             </nav>
     </div>
@@ -60,45 +60,98 @@
         <h3 class="heading2">Бронюйте та купуйте якісну та смачну каву саме у нас!</h3>
         <div class="grid">
             <div class="buy-coffee">
-            <img class="starpic" src="./img/BlondeEspresso.png" alt="">
+            <img class="starpic" src="./img/blonde.png" alt="">
                 <h4 class="heading3">Starbucks Blonde Espresso Roast</h4>
+                <h3><span>₴ 155</span></h3>
                 <div class="roast">
             <img class="typeroast" src="./img/orange-point.svg" alt="">
                 <h4 class="heading3">Світле обсмажування</h4>
                 </div>
             <p class="p">Отримуйте задоволення від нашого еспресо найсвітлішого ступеня обсмажування.</p>
-            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+            <p class="menu_item1 add-cart"><a href="#" class="name">Додати</a></p>
         </div>
         <div class="buy-coffee">
-            <img class="starpic" src="./img/LongShadow.png" alt="">
+            <img class="starpic" src="./img/holiday.png" alt="">
                 <h4 class="heading3">Starbucks Holiday Blend</h4>
+                <h3><span>₴ 144</span></h3>
                     <div class="roast">
                     <img class="typeroast" src="./img/brown-point.svg" alt="">
                 <h4 class="heading3">Середнє обсмажування</h4>
                     </div>
             <p class="p">Насолодіться особливим блендом солодких смаків з трав’яними та кленовими нотками.</p>
-            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+            <p class="menu_item1 add-cart"><a href="#" class="name">Додати</a></p>
         </div>
     <div class="buy-coffee">
-        <img class="starpic" src="./img/Shadow_HouseBlend.png" alt="">
+        <img class="starpic" src="./img/house.png" alt="">
             <h4 class="heading3">Starbucks House Blend</h4>
+            <h3><span>₴ 160</span></h3>
             <div class="roast">
                 <img class="typeroast" src="./img/brown-point.svg" alt="">
             <h4 class="heading3">Середнє обсмажування</h4>
             </div>
             <p class="p">Збалансований смак горіхів і какао, який розкривається завдяки обсмажуванню.</p>
-            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+            <p class="menu_item1 add-cart"><a href="#" class="name">Додати</a></p>
     </div>
     <div class="buy-coffee special">
-        <img class="starpic" src="./img/Shadow_EspressoRoast.png" alt="">
+        <img class="starpic" src="./img/roast blend.png" alt="">
             <h4 class="heading3">Dark Espresso Roast</h4>
+            <h3><span>₴ 175</span></h3>
             <div class="roast">
                 <img class="typeroast" src="./img/purple-point.svg" alt="">
             <h4 class="heading3">Темне обсмажування</h4>
             </div>
             <p class="p">Для цього вишуканого еспресо характерний розкішний карамельний присмак.</p>
-            <p class="menu_item1"><a href="./pages/about.html" target="_blank" class="name">Додати</a></p>
+            <p class="menu_item1 add-cart"><a href="#" class="name">Додати</a></p>
     </div>
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <div class="popup_header">
+                        <a href="#close" title="Close" class="popup_close">×</a>
+                        <h5 class="product_title">ТОВАР</h5>
+                        <h5 class="price">ЦІНА</h5>
+                        <h5 class="quantity">КІЛЬКІСТЬ</h5>
+                        <h5 class="total">РАЗОМ</h5>
+                    </div>
+                    <div class="products">
+
+                    </div>
+                    
+<div class="container-form">
+    <form class="main_form main_form_1" action="#">
+        <div class="title"><h2>Оформлення online замовлення</h2></div>
+<fieldset class="forms">
+            <legend>Контактна інформація</legend>
+            <div class="columns">
+            <div class="part">
+            <label for="surname">Прізвище<span>*</span></label>
+            <input class="input_det" type="text" id="surname" name="name" title="Введіть ваше прізвище (з великої літери)" placeholder="Ваше прізвище" required>
+            </div>
+            <div class="part">
+            <label for="myname">Ім'я<span>*</span></label>
+            <input class="input_det" type="text" id="myname" name="name" title="Введіть ваше ім'я (з великої літери)" placeholder="Ваше ім'я" required>
+            </div>
+            <div class="part">
+            <label for="myemail">Email</label>
+            <input class="input_det" type="email" id="myemail" name="email" title="Введіть ваш email" placeholder="Ваш email">
+            </div>
+            <div class="part">
+            <label for="phone">Телефон<span>*</span></label>
+            <input class="input_det" type="tel" id="phone" name="phone" title="Введіть ваш номер телефону" placeholder="333-33-33" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+        </div>
+        </div>
+        </fieldset>
+<div class="buttons">
+        <button type="submit" class="floated button1">Оформити замовлення</button>
+        <button type="submit" class="floated button2">Очистити</button>
+        </div>
+    </form>
+</div>
+    </div>
+
+                </div>
+            </div>
         </div>
 </section>
 <section class="menu_coffee">
@@ -189,98 +242,7 @@
         </div>
     </div>
 </section>
-<div id="popup" class="popup">
-    <div class="popup_body">
-        <div class="popup_content">
-            <div class="popup_header">
-                <a href="#close" title="Close" class="popup_close">×</a>
-            </div>
-<div class="title"><h2>Оформлення online замовлення</h2></div>
-    <div class="container-form">
-        <form class="main_form main_form_1" action="#">
-            <fieldset class="forms">
-                <legend>Замовлення</legend>
-            <div class="columns">
-            <div class="part">
-                <div>Сорт кави</div> <select class="sort" name="number" id="coffeeclass">
-                    <option value="one">Starbucks Holiday Blend</option>
-                    <option value="two" selected>Starbucks Blonde Espresso Roast</option>
-                    <option value="three">Starbucks House Blend</option>
-                    <option value="four">Dark Espresso Roast</option>
-                </select>
-            </div>
-                <br>
-            <div class="part">
-                    Кількість пакетів <input class="input_det packs" type="number" min="1" max="10">
-            </div>
-            <div class="part">
-                Тип кави
-                <br>
-                    <input type="radio" name="numbers" value="one">Зернова
-                    <br>
-                    <input type="radio" name="numbers" value="one" checked>Мелена
-            </div>
-            <div class="part">
-                Додаткові опції
-                <br>
-                    <input type="checkbox" class="custom-checkbox" id="pack" name="number" value="one">
-                    <label for="pack">Подарункова упаковка</label>
-                    <br>
-                    <input type="checkbox" class="custom-checkbox" id="cup" name="number" value="two">
-                    <label for="cup">Брендована чашка</label>
-                    <br>
-                    <input type="checkbox" class="custom-checkbox" id="product" name="number" value="three">
-                    <label for="product">Каталог продукції</label>
-            </div>
-            </div>
-            </fieldset>
-            <fieldset class="forms">
-                <legend>Контактна інформація</legend>
-                <div class="columns">
-                <div class="part">
-                <label for="surname">Прізвище<span>*</span></label>
-                <input class="input_det" type="text" id="surname" name="name" title="Введіть ваше прізвище (з великої літери)" placeholder="Ваше прізвище" required>
-                </div>
-                <div class="part">
-                <label for="myname">Ім'я<span>*</span></label>
-                <input class="input_det" type="text" id="myname" name="name" title="Введіть ваше ім'я (з великої літери)" placeholder="Ваше ім'я" required>
-                </div>
-                <div class="part">
-                <label for="myemail">Email</label>
-                <input class="input_det" type="email" id="myemail" name="email" title="Введіть ваш email" placeholder="Ваш email">
-                </div>
-                <div class="part">
-                <label for="phone">Телефон<span>*</span></label>
-                <input class="input_det" type="tel" id="phone" name="phone" title="Введіть ваш номер телефону" placeholder="333-33-33" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-            </div>
-            </div>
-            </fieldset>
-            <fieldset class="forms">
-                <legend>Інформація по доставці</legend>
-            <div class="columns">
-                <div class="part">
-                <label>Адреса</label>
-                <input class="input_det" type="text" name="street" title="Введіть вашу адресу" placeholder="вул.Нова, 30А">
-                </div>
-                <div class="part">
-                <label>Місто</label>
-                <input class="input_det" type="text" name="city" title="Введіть назву вашого міста/села" placeholder="м.Київ">
-                </div>
-                <div class="part">
-                <label>Поштовий індекс</label>
-                <input class="input_det" type="text" title="Введіть ваш поштовий індекс" placeholder="03148" pattern="[0-9]{5}">
-                </div>
-            </div>
-            </fieldset>
-        <div class="buttons">
-            <button type="submit" class="floated button1">Оформити замовлення</button>
-            <button type="submit" class="floated button2">Очистити</button>
-            </div>
-        </form>
-    </div>
-        </div>
-    </div>
-</div>
+
 <section class="news">
     <div class="columns1">
         <div class="part1">

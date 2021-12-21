@@ -178,6 +178,12 @@ div.icons div img {
 .menu_icon{
     display: none;
 }
+.shopping span {
+    font-size: 20px;
+}
+nav.navbar.nav_container.active{
+    z-index: 1;
+}
 /*section cafebg*/
 section.container.cafebg{
     min-height: 100vh;
@@ -643,6 +649,58 @@ label p a:hover{
     overflow-x: hidden;
     transition: all 0.5s ease 0s;
 }
+.popup_header{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
+}
+.product_title{
+    width: 45%;
+}
+.price{
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.quantity img{
+    margin: 5px;
+    height: 20px;
+}
+.total{
+    display: flex;
+    align-items: center;
+}
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+.basketTotalTitle{
+    width: 30%;
+}
+.basketTotal{
+    width: 10%;
+}
+.product {
+    width: 45%;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.products .price,
+.products .total {
+    font-size: 18px;
+}
 .popup:target{
     opacity: 1;
     visibility: visible;
@@ -651,14 +709,15 @@ label p a:hover{
     min-height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 30px 10px;
     font-size: 14px;
 }
 .popup_content{
     background-color: #fff;
     color: #000;
-    max-width: 800px;
+    justify-content: space-around;
+    width: 800px;
     padding: 30px;
 }
 .popup_header .popup_close{
@@ -863,9 +922,6 @@ div.title_coffee span {
     display: flex;
     max-width: 55px;
     margin-left: 10px;
-}
-div.logo{
-    z-index: 2;
 }
 @media (max-width: 1280px){
     .row1{
