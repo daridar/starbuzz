@@ -153,6 +153,9 @@ a.menu__item:hover {
     border-bottom: 2px solid #e3bc59f3;
     padding-bottom: 8px;
 }
+li a.menu__item.current {
+    color: #e3bc59f3!important;
+}
 .menu_sub-list li a:hover{
     color: #e3bc59f3;
     border-bottom: 2px solid #e3bc59f3;
@@ -348,6 +351,13 @@ body._mobile .center_row > li.active .menu_sub-list {
     pointer-events: all;
     display: block;
 }
+.buttons{
+    display: flex;
+    align-items: center;
+}
+.buttons button{
+    margin: 10px;
+}
 /*section menu*/
 .menu_coffee {
     background-color: #e9e7e5;
@@ -529,14 +539,11 @@ i.down:hover{
 }
 .part1{
     flex: 50%;
-    align-items: center;
     justify-content: center;
 }
 .container-form{
-    max-width: 500px;
-    width: 100%;
     background: #fff;
-    margin: 20px auto;
+    margin: 20px 50px;
     padding: 30px;
     box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.125);
 }
@@ -549,11 +556,19 @@ i.down:hover{
 }
 .container-form form{
     width: 100%;
+    height: auto;
+}
+.main_form .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main_form .row fieldset{
+    flex: 50%;
+    padding: 26px 20px;
 }
 .part1{
     display: flex;
     align-items: center;
-    margin: 0 15px;
 }
 .part1 label{
     width: 50px;
@@ -568,7 +583,6 @@ i.down:hover{
     margin: 15px 0;
 }
 .part1 .input_det {
-    width: 160px;
     outline: none;
     border: 0.5px solid #bdbcbaf3;
     font-size: 15px;
@@ -674,6 +688,10 @@ label p a:hover{
     margin: 5px;
     height: 20px;
 }
+div.products div.product img{
+    width: 150px;
+    height: 150px;
+}
 .total{
     display: flex;
     align-items: center;
@@ -739,26 +757,38 @@ form.main_form_1 fieldset{
 .part{
     margin: 15px;
     font-size: 16px;
-    flex: 50%;
     box-sizing: border-box;
     padding-left: 40px;
     padding: 20px;
     vertical-align: middle;
 }
-.columns {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 40px;
-}
-.part input{
-    width: 160px;
+.part input.input_det{
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    text-transform: none;
     outline: none;
     border: 0.5px solid #bdbcbaf3;
-    font-size: 15px;
-    padding: 8px 10px;
     transition: all 0.3s ease;
 }
-
+.part input[type="radio"]{
+    margin: 7px;
+}
+.part {
+    clear:both; text-align: left;
+}
+label span{
+    color: red;
+}
+label a{
+    color: #a9855b;
+}
+label a:hover{
+    color:rgb(212, 202, 142);
+}
+.columns label {
+    font-size: 14px;
+}
 /*footer*/
 footer{
     background-color: #eceef0;
@@ -793,7 +823,6 @@ footer{
         padding: 40px 20px;
         }
 }
-
 /*page about caffeine*/
 .bg-color img{
     margin: auto;
@@ -813,10 +842,12 @@ footer{
     margin-top: 30px;
 }
 .circle {
+    border-radius: 50%;
     float: left;
     shape-outside: circle(45%);
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 350px;
+    padding: 30px;
 }
 .make-drink{
     font-size: 18px;
@@ -837,14 +868,321 @@ footer{
 background-color: #dadfdf;
 }
 
+/*page about*/
+/*section rewievs*/
+section.review{
+    background-color: #dadfdf;
+}
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 24px;
+}
+.review .box-container .box{
+    border:1px solid #b89e80; 
+    text-align: center;
+    padding: 20px 25px;
+}
+.review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #4b4432f3;
+    padding: 2rem 0;
+}
+.review .box-container .box .user{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review .box-container .box h3{
+    padding: 24px 0;
+    font-size: 30px;
+}
+.rating-result {
+	width: 265px;
+	margin: 0 auto;
+}
+.rating-result span {
+	padding: 0;
+	font-size: 22px;
+	margin: 0 2px;
+	line-height: 0.6;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-result > span:before {
+	content: '★';
+}
+.rating-result > span.active {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+/*section write reviews*/
+section.contact {
+    background-color: #e9e7e5;
+}
+.contact .row{
+    display: flex;
+    background: rgb(246 245 244);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.contact .row .photo-in-form{
+    margin: 30px;
+}
+.photo-in-form img {
+    width: 100%;
+    height: auto;
+}
+.contact .row form {
+    flex: 50%;
+    padding: 26px 20px;
+    text-align: center;
+}
+.contact .row form h3{
+    font-size: 30px;
+}
+.contact .row form .input-form{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 2px solid #fff;
+}
+.input-form label {
+    font-size: 16px;
+}
+.contact .row form .input-form img{
+    padding-left: 14px; 
+    padding-right: 14px;
+}
+.contact .row form .input-form input,
+.contact .row form .input-form p textarea{
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    text-transform: none;
+}
+.btn-sub {
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
+    color: #a9855b;
+    background-color: #dac48ef3;
+    cursor: pointer;
+}
+.btn-sub:hover{
+    color: #dac48ef3;
+    background-color: #a9855b;
+}
+/*section video*/
+section.video-section{
+    background-color: #e9e7e5;
+}
+.video-section .row-video{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.video-section .row-video .video video {
+    flex: 50%;
+}
+.video video{
+    width: 100%;
+    height: auto;
+}
+/*section about us*/
+section.about-us {
+    background-image: url(./img/background_image.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 65vh;
+    width: 100%;
+
+}
+@media(max-width: 775px){
+    section.video-section .row-video{
+    flex-direction: column;
+    }
+}
+/*page table*/
+section.table{
+    background-color: #dadfdf;
+}
+table {
+    background-color: initial;
+    width: 55%;
+}
+h2 span {
+    color: #5E4554;
+}
+.content-table {
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #333333;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
+}
+.content-table thead tr {
+    background-color: #3c4047;
+    color: rgb(180, 157, 140);;
+    font-weight: bold;
+}
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+.content-table tbody tr {
+    border-bottom: 0.6px solid #daae40;
+}
+tbody td {
+    text-align: center;
+}
+.date span {
+    color: black;
+    font-weight: bolder;
+    font-size: 35px;
+}
+td.date span {
+    display: block;
+}
+.date {
+    text-align: center;
+}
+table.content-table {
+    margin: auto;
+}
+/*popup-2*/
+.modal{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1010;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    transition: 0s visibility 0.15s, 0.15s opacity;
+}
+.modal-content{
+    opacity: 0;
+    transform: translateY(-100px);
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 30px;
+    width: 900px;
+    max-width: calc(100% - 0.01px)!important;
+    background: #fff;
+    transition: .3s linear;
+    transition-property: opacity,transform;
+}
+.modal-close{
+    position: absolute;
+    z-index: 1010;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparet;
+    display: inline-block;
+    outline: none;
+    opacity: 0.6;
+    transition: .1s ease-in-out;
+    transition-property: opacity;
+}
+.modal-close:hover{
+    opacity: 1;
+}
+.modal.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0s visibility, 0.15s opacity;
+}
+.modal.active .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: .3s linear;
+    transition-property: opacity,transform;
+}
+.modal-close a{
+    font-size: 20px;
+    color: #000;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*section tickets*/
+section.tickets{
+    background-color: #e9e7e5;
+}
+.col1 img{
+    flex: 50%;
+    width: 100%;
+    height: auto;
+}
+.col1 button {
+    flex: 50%;
+    margin: 40px;
+    margin-left: 150px;
+}
+
+@media 
+only screen and (max-width: 530px){
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr { border: 1px solid #ccc; }
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+    table.content-table{
+        width: 450px;
+        max-width: 100%;
+    }
+	td:before { 
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+        font-weight: 600;
+        color: #5e5249;
+	}
+    td:nth-of-type(1):before { content: "Дата: "; }
+	td:nth-of-type(2):before { content: "Час: "; }
+	td:nth-of-type(3):before { content: "Виконавець: "; }
+	td:nth-of-type(4):before { content: "Вартість: "; }
+    .tr td:nth-of-type(1):before { content: "Час: "; }
+	.tr td:nth-of-type(2):before { content: "Виконавець: "; }
+    .tr td:nth-of-type(3):before { content: "Вартість: "; }
+    
+
+}
 
 
 
 
 
 
-
-
+/*media queires*/
 @media (min-width: 767px){
     .center_row{
         display: flex;
@@ -951,14 +1289,6 @@ div.title_coffee span {
     }
 }
 @media (max-width: 340px){
-    .columns1 .part1{
-        width: 250px;
-        margin-right: 20px;
-    }
-    fieldset.forms legend {
-        margin-left: -40px;
-        font-size: 14px;
-    }
     fieldset.forms p.p,
     fieldset.forms p.p a,
     div.part1 label{
@@ -968,27 +1298,25 @@ div.title_coffee span {
         width: 100px;
     }
     .container-form{
-        width: 300px;
+        width: 100%;
     }
+    .col1 p{
+        margin: 20px;
+        font-size: 14px;
+    }
+    
 }
 @media only screen and (max-width: 700px){
     .popup_content {
         width: 100%;
     }
 }
+@media (max-width: 870px){
+    .popup_header .popup_close{
+        color:black;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-/*media queires*/
 @media screen and (min-width: 960px) {
     html {
       margin-left: calc(100vw - 100%);
@@ -1059,5 +1387,31 @@ div.title_coffee span {
     .special{
     display: block;
     max-width: 100%;
+    }
+    div.products div.product img{
+        width: 110px;
+        height: 110px;
+    }
+    .products .product p{
+        font-size: 14px;
+    }
+    .products .price, .products .total{
+        font-size: 14px;
+    }
+    .quantity img {
+        margin: 5px;
+        height: 15px;
+    }
+    .quantity {
+        width: 25%;
+    }
+}
+@media (max-width: 576px){
+    .container-form{
+        padding: 0;
+        margin: 0;
+    }
+    .main_form .row fieldset{
+        padding: 0;
     }
 }

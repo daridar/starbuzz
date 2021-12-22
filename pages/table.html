@@ -5,23 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Афіша</title>
-    <link rel = "stylesheet" href="../main.css">
+    <link rel = "stylesheet" href="../mainfile.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" type="img/png" sizes="32x32" href="../img/favicon-32x32.png">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav_container center_row">
-            <div class="logo"><a href="#"><img src="../img/coffee-bean.svg" alt=""></a><h1>Starbuzz</h1></div>
-            <ol class="menu_list center_row">
-                <li><a href="./pages/about.html" class="menu__item" target="_blank">Про нас</a></li>
-                <li><a href="./pages/сaffeine.html" class="menu__item" target="_blank">Про кофеїн</a></li>
-                <li><a href="./pages/table.html" class="menu__item" target="_blank">Афіша</a></li>
-            </ol>
-            <a class="link2 btn btn-secondary" href="#" title="Забронювати">Забронювати!</a>
+    <header class="header">
+        <div class="header_container">
+            <div class="logo"><a href="../index.html"><img src="../img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
+            <div class="header_menu menu">
+                <div class="menu_icon">
+                    <img src="../img/menu.png"></im>
+                </div>
+                <nav class="navbar nav_container">
+                    <ol class="center_row">
+                        <li><a href="../index.html" class="menu__item" target="_blank">Головна</a></li>
+                        <li>
+                            <a href="#" class="menu__item">About</a>
+                            <span class="menu_arrow"></span>
+                            <ul class="menu_sub-list">
+                                <li><a href="#" class="menu_sub-link" target="_blank">Філософія</a></li>
+                                <li><a href="#" class="menu_sub-link" target="_blank">Партнери</a></li>
+                                <li><a href="#" class="menu_sub-link" target="_blank">Контакти</a></li>
+                            </ul>
+                        </li>
+                    <li><a href="../pages/сaffeine.html" class="menu__item" target="_blank">Про кофеїн</a></li>
+                    <li><a href="../pages/table.html" class="menu__item current"" target="_blank">Афіша</a></li>
+                    </ol>
+                    <div class="icons">
+                        <div class="search" id="search-btn"><img src="../img/search.png" alt="search"></div>
+                        <div class="shopping" id="card-btn"><a href="#popup"><img src="../img/shopping-cart.png" alt="yourcart"></a><span>0</span></div>
+                    </div>
+                </nav>
         </div>
-    </nav>
-    <section>
-        <h2>Виступи у <span>грудні</span> 2021!</h2>
+        </div>
+    </header>
+    <section class="table">
+        <h1 class="heading">Виступи у <span>грудні</span> 2021!</h1>
+        <div style="overflow-x:auto;">
             <table class="content-table">
                 <thead>
                     <tr>
@@ -38,12 +59,12 @@
                     <td>Гурт Fly</td>
                     <td>Вхід вільний</td>
                 </tr>
-                <tr>
+                <tr class="tr">
                     <td>21:00</td>
                     <td>Гурт OldBand</td>
                     <td>Вхід вільний</td>
                 </tr>
-                <tr>
+                <tr class="tr">
                     <td>21:30</td>
                     <td>Гурт Moon</td>
                     <td>Вхід вільний</td>
@@ -58,7 +79,7 @@
                         <a class="btn btn-secondary" href="#"><span>Забронювати</span></a>
                     </td>
                 </tr>
-                <tr>
+                <tr class="tr">
                     <td>21:00</td>
                     <td>Гурт Fly</td>
                 </tr>
@@ -74,11 +95,19 @@
                 </tr>
             </tbody>
             </table>
+        </div>
     </section>
     <section class="tickets">
-    <div class="title"><h2>Online-замовлення квитків</h2></div>
+          <!-- Modal -->
+          <aside id="order-modal" class="modal">
+            <div class="modal-content">
+                <button id="order-modal-close" class="modal-close js-modal-close">
+                    <a href="#order-modal-close">x</a>
+                </button>
+                <div class="title"><h2 class="heading2">Online-замовлення квитків</h2></div>
         <div class="container-form">
             <form class="main_form" action="#">
+                <div class="row">
                 <fieldset class="forms">
                     <legend>Обрані квитки</legend>
                     <div class="columns">
@@ -118,7 +147,7 @@
                         </div>
                         <div>
                             <input type="checkbox" class="custom-checkbox" name="number" value="one">
-                            <label for="pack">Купуючи квиток, я підтверджую згоду з<a href="#">умовами повернення</a>та договором <a href="#">Оферти</a></label>  
+                            <label for="pack">Купуючи квиток, я підтверджую згоду з<a href="#" style="font-size: 14px;">умовами повернення</a>та договором <a href="#" style="font-size: 14px;">Оферти</a></label>  
                         </div>
                     </div>
                 </fieldset>
@@ -140,88 +169,88 @@
                         </div>
                         <div class="part">
                         <label for="phone">Телефон<span>*</span></label>
-                        <input class="input_det" type="tel" id="phone" title="Введіть ваш номер телефону" placeholder="333-33-33" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                        <input class="input_det" type="tel" id="phone" title="333-33-33" placeholder="333-33-33" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                         </div>
                         <div class="part">
                         <label for="text">Коментар</label>
                         <input class="input_det comment" type="text" id="text" title="Напишіть Ваші побажання" placeholder="Коментар">
                         </div>
+                        <div class="part">
+                            <button type="submit" class="btn-sub">Замовити</button>
+                        </div>
                     </div>
                 </fieldset>
-                <div class="buttons">
-                    <button type="submit" class="floated button2">Замовити</button>
-                </div>
+            </div>
             </form>
+            </div>
+            </div>
+        </aside>
+        <div class="row1">
+            <div class="col1">
+                <h2 class="heading3" style="font-size: 20px;">Купити квитки</h2>
+                <p>Продаж квитків онлайн на концерти популярних українських виконавців. Швидко і зручно! Актуальна афіша заходів на вихідні, на сьогодні, на завтра – завжди в курсі подій! Електронний квиток.</p>
+                <button id="order-modal-open" type="submit" class="btn-sub"><a href="#order-modal">Замовити</a></button>
+            </div>
+            <div class="col1">
+                <img src="../img/concert-photo.jpg" alt="concert">
+            </div>
         </div>
     </section>
-    <section class="news">
-        <section class="tickets">
-                <div class="container-form">
-                    <form class="main_form" action="#">
-                        <fieldset class="forms">
-                            <legend>Підписка на новини</legend>
-                            <div class="title"><h2>Підпишіться на новини Starbuzz та будьте завжди першими в курсі подій!</h2></div>
-                            <div class="columns1">
-                            <div class="part1">
-                                <label for="email">Email</label>
-                                <input class="input_det" type="email" id="email" title="Вкажіть свій email" placeholder="Ваш email">
-                            </div>
-                            <div class="part1 signin">
-                                <div class="buttons">
-                                    <button type="submit" class="floated button2">Я користувач</button>
-                                </div>
-                            </div>
-                            <div class="part1 signin">
-                                <div class="buttons">
-                                    <button type="submit" class="floated button2">Я замовник</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="pack" class="custom-checkbox" name="number" value="one">
-                            <label for="pack">Заповнюючи цю форму, Ви погоджуєтеся з нашою <a href="#">політикою конфіденціальності</a></label>  
-                        </div>
-                        </fieldset>
-                        
-                    </form>
-                </div>
-        </section>
-    </section>
-    <footer class="table-footer">
-        <section class="contacts">
-                <div class="contact">
-            <div class="networks">
-                <div class="text">
-                <h2>Контакти</h2>
-                <h4>Ви знайдете нас в самому центрі Києва. Чекаємо на Вас!</h4>
-                <h4>Інформація</h4>
-                <ul>
-                    <li><a href="./pages/about.html">Про кафе</a></li>
-                    <li><a href="#menu">Меню</a></li>
-                    <li><a href="./pages/table.html">Афіша</a></li>
-                </ul>
-            </div>
-            </div>
-               <div class="networks net">
-                <p>Ми в соціальних мережах:</p>
-                <p><a href="https://www.instagram.com/" title="Instagram" target="_blank"><img src="../img/icons/insta.png" width="30" height="30" alt="Ми в Instagram!"></a></p>
-                <p><a href="https://www.facebook.com/" title="Facebook" target="_blank">
-                    <img src="../img/icons/Facebook.jpg" width="30" height="30" alt="Ми в Facebook!"></a>
-                </p>
-                <p><a href="mailto:starbuzzcafe@gmail.com?subject=Important" title="Email">
-                    <img src="../img/icons/email.jpg.png" width="30" height="30"  alt="Напишіть нам!"></a>
-                </p>
-                <p>
-                    <a href="skype:skypename?chat" title="Skype(chat)"><img src="../img/icons/skype.png" width="30" height="30" alt="Напишіть нам в Skype!"></a>
-                </p>
-                <p>
-                    <a href="skype:skypename?call" title="Skype(call)"><img src="../img/icons/skype.png" width="30" height="30" alt="Зателефонуйте нам в Skype!"></a>
-                </p>
-                <p><a href="callto:+0689584521" title="Phone number"><img src="../img/icons/call.png" width="30" height="30" alt="Зателефонуйте нам!"></a>
-                </p>
-            </div>
-            </div>
-        </section>
-    </footer>
+    <footer>
+        <div class="container-footer">
+          <ul class="flex-row flex-links">
+            <li><a href="#h">Головна</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#team">Партнери</a></li>
+            <li><a href="#contact-us">Контакти</a></li>
+          </ul>
+          <ul class="flex-row">
+            <li>
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                    <img src="../img/icons/instagram.png" alt="Ми в Instagram!">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                    <img src="../img/icons/facebook (1).png" alt="Ми в Facebook!">
+                </a>
+            </li>
+            <li>
+                <a href="mailto:starbuzzcafe@gmail.com?subject=Important" title="Email">
+                    <img src="../img/icons/email.png" alt="Напишіть нам!">
+                </a>
+            </li>
+            <li>
+                <a href="skype:skypename?chat" title="Skype(chat)">
+                    <img src="../img/icons/skype.png" alt="Напишіть нам в Skype!">
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Twitter">
+                    <img src="../img/icons/twitter.png" alt="Напишіть нам в Twitter!">
+                </a>
+            </li>
+            <li>
+                <a href="callto:+0689584521" title="Phone number">
+                    <img src="../img/icons/call.png" alt="Зателефонуйте нам!">
+                </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <script>
+        const modal = document.getElementById('order-modal');
+    const openModal = document.getElementById('order-modal-open');
+    const closeModal = document.getElementById('order-modal-close');
+    
+    openModal.addEventListener('click', function(){
+        modal.classList.add('active');
+    })
+    closeModal.addEventListener('click', function(){
+        modal.classList.remove('active');
+    })
+    </script>
 </body>
+<script src="../script.js"></script>
 </html>

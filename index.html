@@ -7,21 +7,23 @@
     <title> Starbuzz | Головна сторінка</title>
     <link rel = "stylesheet"  href="mainfile.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" type="img/png" sizes="32x32" href="img/favicon-32x32.png">
     <style>
     </style>
 </head>
 <body>
 <header class="header">
     <div class="header_container">
-        <div class="logo"><a href="#"><img src="./img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
+        <div class="logo"><a href="./index.html"><img src="./img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
         <div class="header_menu menu">
             <div class="menu_icon">
                 <img src="img/menu.png"></im>
             </div>
             <nav class="navbar nav_container">
                 <ol class="center_row">
+                    <li><a href="../index.html" class="menu__item current" target="_blank">Головна</a></li>
                     <li>
-                        <a href="#" class="menu__item">About</a>
+                        <a href="./pages/about.html" class="menu__item">About</a>
                         <span class="menu_arrow"></span>
                         <ul class="menu_sub-list">
                             <li><a href="#" class="menu_sub-link" target="_blank">Філософія</a></li>
@@ -30,7 +32,7 @@
                         </ul>
                     </li>
                 <li><a href="./pages/сaffeine.html" class="menu__item" target="_blank">Про кофеїн</a></li>
-                <li><a href="./pages/table.html" class="menu__item" target="_blank">Афіша</a></li>
+                <li><a href="./pages/table.html" id="table" class="menu__item" target="_blank">Афіша</a></li>
                 </ol>
                 <div class="icons">
                     <div class="search" id="search-btn"><img src="./img/search.png" alt="search"></div>
@@ -115,9 +117,8 @@
                         <h5 class="total">РАЗОМ</h5>
                     </div>
                     <div class="products">
-
+                        
                     </div>
-                    
 <div class="container-form">
     <form class="main_form main_form_1" action="#">
         <div class="title"><h2>Оформлення online замовлення</h2></div>
@@ -143,9 +144,9 @@
         </div>
         </fieldset>
 <div class="buttons">
-        <button type="submit" class="floated button1">Оформити замовлення</button>
-        <button type="submit" class="floated button2">Очистити</button>
-        </div>
+        <button type="submit" class="btn-sub">Оформити замовлення</button>
+        <button type="submit" class="btn-sub">Очистити</button>
+</div>
     </form>
 </div>
     </div>

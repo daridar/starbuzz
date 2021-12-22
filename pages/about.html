@@ -7,19 +7,21 @@
     <title>Про нас</title>
     <link rel = "stylesheet"  href="../mainfile.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" type="img/png" sizes="32x32" href="../img/favicon-32x32.png">
 </head>
 <body>
     <header class="header">
         <div class="header_container">
-            <div class="logo"><a href="#"><img src="../img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
+            <div class="logo"><a href="../index.html"><img src="../img/logo.png" alt="logo"></a><h1 id="logo-name">Starbuzz</h1></div>
             <div class="header_menu menu">
                 <div class="menu_icon">
                     <img src="../img/menu.png"></im>
                 </div>
                 <nav class="navbar nav_container">
                     <ol class="center_row">
+                        <li><a href="../index.html" class="menu__item" target="_blank">Головна</a></li>
                         <li>
-                            <a href="#" class="menu__item">About</a>
+                            <a href="#" class="menu__item current">About</a>
                             <span class="menu_arrow"></span>
                             <ul class="menu_sub-list">
                                 <li><a href="#" class="menu_sub-link" target="_blank">Філософія</a></li>
@@ -39,16 +41,96 @@
         </div>
     </header>
     <section class="about-us">
-
     </section>
-    <section class="video">
-
+    <section class="video-section">
+        <h1 class="heading">Обслуговування</h1>
+            <div class="row-video">
+                <div class="video">
+                    <video controls>
+                        <source src="../img/video(starbuzz).mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Чому наша кава особлива?</h3>
+                    <p>У нас працює найкраща команда кавових гуру — фіналістів та тренерів кавових чемпіонатів, які продовжують бути практиками в індустрії.</p>
+                    <p>Вони знають про каву все — від обсмажування зеленого зерна до приготування напою. Опанувавши мистецтво кави, наші баристи створюють напої-шедеври, які хочеться куштувати ще і ще. Для нас дуже важливо, яку каву отримує кожен гість.</p>
+                </div>
+            </div>
     </section>
-    <section class="rewievs">
-
+    <section class="review" id="review">
+        <h1 class="heading"> Відгуки <span>відвідувачів</span> </h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="../img/care.png" alt="" class="quote">
+                    <p>Таке затишне домашнє місце для своїх! Супер м'яка кава, супер смаколики ручної роботи та напої (рекомендую спробувати тут айс-лате!). Офіціанти та баристи дуже ввічливі та привітні.</p>
+                    <img src="../img/boy1-photo.jpg" class="user" alt="">
+                    <h3>Олег</h3>
+                    <div class="rating-result">
+                        <span class="active"></span>	
+                        <span class="active"></span>    
+                        <span class="active"></span>  
+                        <span class="active"></span>    
+                        <span class="active"></span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="../img/like.png" alt="" class="quote">
+                    <p>Дуже приємна атмосфера, ідеальне місце для кавування у вузькому колі. Кава бомбезна, смачні десерти. Єдине — деякі труднощі у персоналу з переходом на українську мову.</p>
+                    <img src="../img/girl-photo.jpg" class="user" alt="">
+                    <h3>Юлія</h3>
+                    <div class="rating-result">
+                        <span class="active"></span>	
+                        <span class="active"></span>    
+                        <span class="active"></span>  
+                        <span class="active"></span>    
+                        <span></span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="../img/love.png" alt="" class="quote">
+                    <p>Дуже смачна кава, дружній персонал, затишний інтер'єр і наявність вільних місць у вечір вихідного дня. Рекомендую відвідати, - не пошкодуєте та матимете приємні спогади і враження.</p>
+                    <img src="../img/boy2-photo.jpg" class="user" alt="">
+                    <h3>Дмитро</h3>
+                    <div class="rating-result">
+                        <span class="active"></span>	
+                        <span class="active"></span>    
+                        <span class="active"></span>  
+                        <span class="active"></span>    
+                        <span class="active"></span>
+                    </div>
+                </div>
+            </div>
     </section>
-    <section class="write-rew">
-        
+    <section class="contact" id="contact">
+            <div class="row">
+                <div class="photo-in-form">
+                    <img src="../img/img-reviews.jpg" alt="">
+                </div>
+                <form action="#">
+                    <h3>Залиште свій відгук!</h3>
+                    <div class="input-form">
+                        <label for="myname"></label>
+                        <img src="../img/icons/user.png" alt="user">
+                        <input class="input_det" type="text" id="name" title="Введіть ваше ім'я (з великої літери)" placeholder="Ваше ім'я" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="myemail"></label>
+                        <img src="../img/icons/email (1).png" alt="email">
+                        <input class="input_det" type="email" id="email" title="Введіть ваш email" placeholder="Ваш email">
+                    </div>
+                    <div class="input-form">
+                        <label for="phone"></label>
+                        <img src="../img/icons/call.png" alt="phone">
+                        <input class="input_det" type="tel" id="phone" title="Введіть ваш номер телефону" placeholder="333-33-33" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="text"></label>
+                        <img src="../img/icons/write.png" alt="comment">
+                        <p><textarea rows="5" cols="60" name="text" placeholder="Напишіть Ваші побажання"></textarea></p>
+                    </div>
+                    <input class="btn-sub" type="submit" value="Надіслати" class="btn">
+                </form>
+            </div>
     </section>
     <footer>
         <div class="container-footer">
@@ -94,5 +176,5 @@
         </div>
       </footer>
 </body>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </html>

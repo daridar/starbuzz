@@ -56,15 +56,7 @@ document.querySelector('.menu_icon').onclick = () =>{
         item.addEventListener('click', ()=>
         item.parentNode.dataset.totalValue = item.dataset.itemValue)
         );
-//popup
-
-
-
-
-
-
-
-
+//active link
 
 
 //sumup prices
@@ -174,7 +166,7 @@ function displayCart(){
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="product">
-                <img src="./img/${item.tag}.png" style="height:150px; width:150px">
+                <img src="./img/${item.tag}.png">
                 <p>${item.name}</p>
             </div>
             <div class="price">₴${item.price}</div>
